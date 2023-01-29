@@ -12,7 +12,7 @@
   border: 3px solid pink;
 }
 
-.content-container {
+.content {
   border: 3px solid blue;
 }
 
@@ -39,6 +39,10 @@ ul {
   row-gap: 10px;
 }
 
+img {
+  height: 1rem;
+}
+
 .sidebar-nav img {
   height: 1rem;
   justify-self: center;
@@ -46,4 +50,32 @@ ul {
 
 img[alt^="Dashboard"] {
   height: 2rem;
+}
+
+img[alt^="Dashboard"] + li {
+  font-size: 1.5rem;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.search-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+label,
+.profile p {
+  display: inline;
+}
+
+.user {
+  display: flex;
+}
+
+.userinfo-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
