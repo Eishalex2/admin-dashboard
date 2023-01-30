@@ -10,6 +10,7 @@
 
 .header {
   border: 3px solid pink;
+  padding: 10px 40px 10px 20px;
 }
 
 .content {
@@ -59,11 +60,13 @@ img[alt^="Dashboard"] + li {
 .header {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .search-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  align-items: center;
 }
 
 label,
@@ -75,9 +78,27 @@ label,
   display: flex;
 }
 
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: end;
+  gap: 20px;
+}
+
 .userinfo-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
+}
+
+.profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile img[src*="pig"] {
+  height: 1.5rem;
 }
 
 .content {
@@ -88,18 +109,19 @@ label,
 
 .projects {
   grid-row: 1 / 3;
-  padding-right: 15px;
+  padding-right: 20px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 20px;
 }
 
 .card {
   border: 2px solid purple;
-  height: 200px;
+  padding: 20px;
+  display: grid;
 }
 
 .projects h3 {
@@ -120,7 +142,7 @@ label,
   border: 2px solid indianred;
   padding: 15px 15px 15px 0;
   display: grid;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 
 .user {
@@ -138,3 +160,38 @@ label,
   gap: 20px;
 }
 
+.user img {
+  height: 2rem;
+}
+
+.card-icons img {
+  height: 1.2rem;
+}
+
+.card-icons {
+  place-self: end;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+input[type="search"] {
+  background-color: lightgrey;
+  border: none;
+  border-radius: 10px;
+  line-height: 1.5rem;
+  appearance: none;
+  padding-left: 8px;
+  font-size: 1rem;
+  width: 90%
+}
+
+input[type="search"]:focus-visible {
+  border: 1px solid green;
+  outline: none;
+}
